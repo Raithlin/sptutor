@@ -1,0 +1,180 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.3
+  SuggestExtensions: false
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'db/migrate/**/*'
+    - 'node_modules/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'log/**/*'
+    - 'storage/**/*'
+    - 'config/environments/**/*'
+    - 'config/puma.rb'
+    - 'config/initializers/**/*'
+
+# Layout - Modern line length and formatting
+Layout/LineLength:
+  Max: 140
+  Exclude:
+    - 'config/**/*'
+    - 'db/**/*'
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+# Style - Modern Ruby conventions
+Style/Documentation:
+  Enabled: false  # Can be enabled later when documentation is added
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: single_quotes
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+  EnforcedShorthandSyntax: either
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/NumericLiterals:
+  MinDigits: 5
+  Strict: true
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+# Metrics aligned with constitution (prefer short methods and classes)
+Metrics/MethodLength:
+  Max: 10
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/ClassLength:
+  Max: 100
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
+    - 'config/routes.rb'
+    - 'config/environments/**/*'
+
+Metrics/AbcSize:
+  Max: 15
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/CyclomaticComplexity:
+  Max: 8
+
+Metrics/PerceivedComplexity:
+  Max: 8
+
+# Naming - Modern conventions
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Naming/MemoizedInstanceVariableName:
+  EnforcedStyleForLeadingUnderscores: required
+
+Naming/PredicatePrefix:
+  ForbiddenPrefixes:
+    - is_
+  AllowedMethods:
+    - is_a?
+
+# Lint - Catch common mistakes
+Lint/AmbiguousBlockAssociation:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*'
+
+Lint/UnusedMethodArgument:
+  AllowUnusedKeywordArguments: true
+
+Lint/UnusedBlockArgument:
+  AllowUnusedKeywordArguments: true
+
+# Performance - Modern Ruby optimizations
+# Uncomment these when rubocop-performance plugin is properly configured
+# Performance/Casecmp:
+#   Enabled: true
+#
+# Performance/StringInclude:
+#   Enabled: true
+#
+# Performance/StartWith:
+#   Enabled: true
+#
+# Performance/EndWith:
+#   Enabled: true
+#
+# Performance/RegexpMatch:
+#   Enabled: true
+#
+# Performance/UnfreezeString:
+#   Enabled: true
+
+# Security
+Security/YAMLLoad:
+  Enabled: true
+
+Security/JSONLoad:
+  Enabled: true
+
+Security/MarshalLoad:
+  Enabled: true
+
+# Rails-specific (when using rubocop-rails)
+# Uncomment these when rubocop-rails plugin is properly configured
+# Rails/UnknownEnv:
+#   Environments:
+#     - development
+#     - test
+#     - production
+#     - staging
+
+# Rails/HasManyOrHasOneDependent:
+#   Enabled: true
+
+# Rails/SkipsModelValidations:
+#   Enabled: true
+#   AllowedMethods:
+#     - touch
+
+# Rails/Output:
+#   Enabled: true
+#   Exclude:
+#     - 'db/seeds.rb'
