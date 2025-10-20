@@ -1,24 +1,77 @@
-# README
+# SmartyPants Tutor
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails application for Smarty Pants Tutoring.
 
-Things you may want to cover:
+## Requirements
 
-* Ruby version
+* **Ruby version:** 3.4.2
+* **Rails version:** 8.0.3
+* **Database:** SQLite3 (>= 2.1)
 
-* System dependencies
+## System Dependencies
 
-* Configuration
+* Ruby 3.4.2
+* Bundler
+* SQLite3
+* Node.js (for asset pipeline)
 
-* Database creation
+## Setup
 
-* Database initialization
+To set up the application for development:
 
-* How to run the test suite
+```bash
+bin/setup
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+This will:
+- Install Ruby dependencies
+- Prepare the database
+- Clear logs and temporary files
+- Start the development server
 
-* Deployment instructions
+## Database
 
-* ...
+The application uses SQLite3 for all environments:
+- **Development:** `storage/development.sqlite3`
+- **Test:** `storage/test.sqlite3`
+- **Production:** `storage/production.sqlite3`
+
+### Database Creation and Initialization
+
+```bash
+bin/rails db:prepare
+```
+
+## Running the Application
+
+Start the development server with:
+
+```bash
+bin/dev
+```
+
+This runs both the Rails server and Tailwind CSS watcher via Foreman.
+
+Alternatively, run the Rails server directly:
+
+```bash
+bin/rails server
+```
+
+## Running the Test Suite
+
+The application uses RSpec for testing:
+
+```bash
+bundle exec rspec
+```
+
+## Deployment
+
+The application is configured for deployment using [Kamal](https://kamal-deploy.org/):
+
+```bash
+kamal deploy
+```
+
+See `config/deploy.yml` for deployment configuration.

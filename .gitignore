@@ -38,3 +38,7 @@
 
 /spec/reports/
 /spec/examples.txt
+
+# Ignore personal Windsurf/VSCode settings
+/.windsurf/settings.json
+/.vscode/settings.json

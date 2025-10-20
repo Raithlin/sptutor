@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "ruby_lsp",
+      "request": "launch",
+      "name": "Debug Rails Server",
+      "program": "bin/rails server",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "ruby_lsp",
+      "request": "launch",
+      "name": "Debug Current RSpec File",
+      "program": "bundle exec rspec ${relativeFile}",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "ruby_lsp",
+      "request": "launch",
+      "name": "Debug All RSpec Tests",
+      "program": "bundle exec rspec",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "ruby_lsp",
+      "request": "launch",
+      "name": "Debug Rails Console",
+      "program": "bin/rails console",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "ruby_lsp",
+      "request": "attach",
+      "name": "Attach to Existing Process",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
