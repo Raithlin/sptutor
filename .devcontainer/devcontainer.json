@@ -1,0 +1,85 @@
+// For format details, see https://containers.dev/implementors/json_reference/.
+// For config options, see the README at: https://github.com/devcontainers/templates/tree/main/src/ruby
+{
+  "name": "sptutor",
+  "dockerComposeFile": "compose.yaml",
+  "service": "rails-app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/rails/devcontainer/features/sqlite3": {}
+  },
+
+  "containerEnv": {
+    "REDIS_URL": "redis://redis:6379/1",
+    "KAMAL_REGISTRY_PASSWORD": "$KAMAL_REGISTRY_PASSWORD"
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000, 6379],
+
+  // Configure tool-specific properties.
+  // "customizations": {},
+
+  // Uncomment to connect as root instead. More info: https://containers.dev/implementors/json_reference/#remoteUser.
+  // "remoteUser": "root",
+
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "bin/setup --skip-server",
+
+  "customizations": {
+    "vscodium": {
+      // Settings are not yet supported
+      //
+      // "settings": {
+      //    "go.useLanguageServer": true,
+      //    "go.gopath": "/go"
+      // },
+
+      // Here you can define additional registries, which can later
+      // be referred in the "extensions" section.
+      //
+      // OpenVSX here is just an example, if you use VS Codium
+      // without any product.json modifications, just skip this part.
+      //
+      // This part is intended to be of use for enterprises and anyone with their private
+      // extensions registry. See: https://github.com/coder/code-marketplace
+      "registries": {
+        // Registry alias to be used in the "extensions" section.
+        "openvsx": {
+          // Registry base url. Must be compatible with OpenVSX API.
+          // See: https://github.com/eclipse/openvsx/wiki/Using-Open-VSX-in-VS-Code
+          "url": "https://open-vsx.org/vscode/gallery",
+
+          // Random headers you'd like to add to all registry requests.
+          "headers": {
+            "Accept": "application/json"
+          }
+        }
+
+        // NOTE: Please, remember that putting Microsoft's Marketplace URL
+        // may be prohibited by its Terms of Use.
+        // See: https://cdn.vsassets.io/v/M190_20210811.1/_content/Microsoft-Visual-Studio-Marketplace-Terms-of-Use.pdf
+      },
+
+      // Extensions configuration
+      "extensions": {
+        // This extension will be downloaded from your editor's
+        // default registry, which is OpenVSX for VS Codium and
+        // Visual Studio Marketplace for VS Code.
+        "golang.Go": {},
+
+        // If you wish, you can specify the desired registry and
+        // version for the extension.
+        "webben.browserslist": {
+          "registry": "openvsx",
+          "version": "11.0.0"
+        }
+      }
+    }
+  }
+}
