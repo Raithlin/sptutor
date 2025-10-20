@@ -42,3 +42,32 @@
 # Ignore personal Windsurf/VSCode settings
 /.windsurf/settings.json
 /.vscode/settings.json
+
+# Node.js / Vite
+/node_modules/
+/public/vite/
+/public/vite-dev/
+/public/vite-test/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# SQLite databases
+*.sqlite3
+*.sqlite3-*
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Vite Ruby
+/public/vite*
+node_modules
+# Vite uses dotenv and suggests to ignore local-only env files. See
+# https://vitejs.dev/guide/env-and-mode.html#env-files
+*.local
+

@@ -4,16 +4,16 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 8.0.3'
-# The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem 'propshaft'
+# Use Vite for modern asset pipeline
+gem 'vite_rails'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '>= 2.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
-# Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem 'tailwindcss-rails'
+# Authentication
+gem 'devise'
+# Authorization
+gem 'pundit'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -31,11 +31,18 @@ gem 'kamal', require: false
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: [:mri, :windows], require: 'debug/prelude'
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem 'brakeman', require: false
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do
