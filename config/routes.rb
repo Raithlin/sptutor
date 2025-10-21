@@ -2,16 +2,48 @@
 
 Rails.application.routes.draw do
   devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  
+  # Public marketing pages
+  root 'public/pages#home'
+  get 'about', to: 'public/pages#about'
+  get 'how-it-works', to: 'public/pages#how_it_works'
+  get 'tutors', to: 'public/pages#tutors'
+  get 'subjects', to: 'public/pages#subjects'
+  get 'testimonials', to: 'public/pages#testimonials'
+  get 'book-assessment', to: 'public/pages#book_assessment'
+  get 'blog', to: 'public/pages#blog'
+  
+  # Policy pages
+  get 'privacy-policy', to: 'public/pages#privacy_policy'
+  get 'terms-of-service', to: 'public/pages#terms_of_service'
+  get 'cookie-policy', to: 'public/pages#cookie_policy'
+  
+  # Legacy routes (keeping for compatibility)
+  get 'services', to: 'public/pages#services'
+  get 'contact', to: 'public/pages#contact'
+  
+  # Contact form submission
+  namespace :public do
+    resources :contact_forms, only: [:create]
+  end
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
+  # Role-based dashboards
+  namespace :tutors do
+    get 'dashboard', to: 'dashboard#index'
+  end
+
+  namespace :students do
+    get 'dashboard', to: 'dashboard#index'
+  end
+
+  namespace :parents do
+    get 'dashboard', to: 'dashboard#index'
+  end
+
+  namespace :admin do
+    get 'dashboard', to: 'dashboard#index'
+  end
+
+  # Health check
   get 'up' => 'rails/health#show', as: :rails_health_check
-
-  # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
-  # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
-  # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
-
-  # Defines the root path route ("/")
-  # root "posts#index"
 end

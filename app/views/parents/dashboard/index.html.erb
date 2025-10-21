@@ -1,0 +1,42 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold">Parent Dashboard</h1>
+    <p class="text-gray-600 mt-2">Welcome back, <%= @user.full_name %>!</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Stats Card -->
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <h2 class="card-title">My Children</h2>
+        <p class="text-4xl font-bold text-primary">0</p>
+        <p class="text-sm text-gray-600">Students</p>
+      </div>
+    </div>
+
+    <!-- Stats Card -->
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <h2 class="card-title">Upcoming Classes</h2>
+        <p class="text-4xl font-bold text-secondary">0</p>
+        <p class="text-sm text-gray-600">This week</p>
+      </div>
+    </div>
+
+    <!-- Stats Card -->
+    <div class="card bg-base-100 shadow-md">
+      <div class="card-body">
+        <h2 class="card-title">New Messages</h2>
+        <p class="text-4xl font-bold text-accent">0</p>
+        <p class="text-sm text-gray-600">From tutors</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8">
+    <div class="alert alert-info">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      <span>Your children's progress and updates will appear here once they are enrolled.</span>
+    </div>
+  </div>
+</div>

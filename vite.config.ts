@@ -4,7 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    RubyPlugin(),
     tailwindcss(),
+    RubyPlugin(),
   ],
+  server: {
+    host: 'localhost',
+    hmr: {
+      host: 'localhost',
+    },
+  },
 })

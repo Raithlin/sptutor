@@ -1,0 +1,94 @@
+<div class="min-h-screen">
+  <!-- Hero Section -->
+  <section class="hero min-h-[600px] bg-gradient-to-br from-primary to-secondary">
+    <div class="hero-content text-center text-primary-content">
+      <div class="max-w-4xl">
+        <h1 class="text-5xl font-bold mb-6">Smarty Pants Tutoring</h1>
+        <p class="text-xl mb-8">
+          Empowering students to achieve academic excellence through personalized, 
+          one-on-one tutoring in Mathematics, English, Afrikaans, and Science.
+        </p>
+        <div class="flex gap-4 justify-center">
+          <%= link_to 'Get Started', contact_path, class: 'btn btn-accent btn-lg' %>
+          <%= link_to 'Learn More', about_path, class: 'btn btn-outline btn-accent btn-lg' %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects Section -->
+  <section class="py-20 bg-base-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Subjects We Teach</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Mathematics -->
+        <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="text-5xl mb-4">📐</div>
+            <h3 class="card-title">Mathematics</h3>
+            <p>From basic arithmetic to advanced calculus</p>
+          </div>
+        </div>
+
+        <!-- English -->
+        <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="text-5xl mb-4">📚</div>
+            <h3 class="card-title">English</h3>
+            <p>Reading, writing, and comprehension skills</p>
+          </div>
+        </div>
+
+        <!-- Afrikaans -->
+        <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="text-5xl mb-4">🗣️</div>
+            <h3 class="card-title">Afrikaans</h3>
+            <p>Language proficiency and literature</p>
+          </div>
+        </div>
+
+        <!-- Science -->
+        <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow">
+          <div class="card-body items-center text-center">
+            <div class="text-5xl mb-4">🔬</div>
+            <h3 class="card-title">Science</h3>
+            <p>Physical, Life, and Natural Sciences</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curriculum Section -->
+  <section class="py-20 bg-base-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Curriculum Support</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="badge badge-primary badge-lg mb-4">CAPS</div>
+          <p class="text-lg">Curriculum and Assessment Policy Statement</p>
+        </div>
+        <div class="text-center">
+          <div class="badge badge-secondary badge-lg mb-4">IEB</div>
+          <p class="text-lg">Independent Examinations Board</p>
+        </div>
+        <div class="text-center">
+          <div class="badge badge-accent badge-lg mb-4">Cambridge</div>
+          <p class="text-lg">Cambridge International</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary text-primary-content">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Contact us today to discuss your child's learning needs and schedule a tutoring session.
+      </p>
+      <%= link_to 'Contact Us', contact_path, class: 'btn btn-accent btn-lg' %>
+    </div>
+  </section>
+</div>

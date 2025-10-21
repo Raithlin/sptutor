@@ -1,0 +1,26 @@
+/* Button Component Classes */
+/* Compose DaisyUI and Tailwind utilities into semantic button classes */
+
+.btn-save {
+  @apply btn btn-primary;
+}
+
+.btn-cancel {
+  @apply btn btn-ghost;
+}
+
+.btn-danger {
+  @apply btn btn-error;
+}
+
+.btn-submit {
+  @apply btn btn-primary;
+}
+
+.btn-edit {
+  @apply btn btn-secondary;
+}
+
+.btn-delete {
+  @apply btn btn-error btn-outline;
+}

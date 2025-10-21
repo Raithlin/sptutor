@@ -1,0 +1,102 @@
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white py-20">
+  <div class="container mx-auto px-4 text-center">
+    <h1 class="text-5xl font-bold mb-6">Our Subjects</h1>
+    <p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+      Expert tutoring across all major subjects for CAPS, IEB, and Cambridge curricula.
+    </p>
+  </div>
+</section>
+
+<!-- Subjects Grid -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <% [
+        {name: "Afrikaans", desc: "Master language proficiency with our expert Afrikaans tutors. From grammar and vocabulary to literature analysis, we cover all aspects of the Afrikaans curriculum.", icon: "🇿🇦", color: "indigo"},
+        {name: "English", desc: "Improve your language skills, grammar, and literature analysis. Develop strong reading comprehension, creative writing, and critical thinking abilities.", icon: "📚", color: "purple"},
+        {name: "Mathematics", desc: "Build strong foundations in all areas of mathematics. From basic arithmetic to advanced calculus, algebra, geometry, and statistics.", icon: "📐", color: "pink"},
+        {name: "Physical Sciences", desc: "Master Physics and Chemistry with hands-on problem solving and theoretical understanding. Perfect for CAPS and IEB students.", icon: "⚗️", color: "blue"},
+        {name: "Life Sciences", desc: "Understand biological processes, ecology, and human biology comprehensively. Prepare for exams with in-depth concept explanations.", icon: "🧬", color: "green"},
+        {name: "Geography", desc: "Explore the world through physical and human geography concepts. Map work, climate studies, and environmental issues covered.", icon: "🌍", color: "teal"},
+        {name: "History", desc: "Discover historical events and develop critical thinking skills. Source analysis, essay writing, and exam preparation.", icon: "📜", color: "amber"},
+        {name: "Accounting", desc: "Master financial accounting principles, bookkeeping, and financial statements. Perfect for Commerce students.", icon: "💼", color: "emerald"},
+        {name: "Business Studies", desc: "Learn business management, economics, and entrepreneurship fundamentals for future business leaders.", icon: "📊", color: "cyan"}
+      ].each do |subject| %>
+        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl transition-shadow">
+          <div class="text-6xl mb-4"><%= subject[:icon] %></div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-3"><%= subject[:name] %></h3>
+          <p class="text-gray-600 mb-6"><%= subject[:desc] %></p>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-900 mb-2 text-sm">Available for:</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full text-xs font-semibold">CAPS</span>
+              <span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-xs font-semibold">IEB</span>
+              <span class="px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-xs font-semibold">Cambridge</span>
+            </div>
+          </div>
+
+          <%= link_to tutors_path(subject: subject[:name]), class: "inline-flex items-center text-indigo-600 hover:text-indigo-700 font-semibold" do %>
+            Find a Tutor
+            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- Curriculum Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Curriculum Expertise</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Our tutors are experts in all major South African curricula</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="bg-white rounded-xl p-8 text-center">
+        <div class="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl font-bold text-indigo-600">CAPS</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Curriculum and Assessment Policy Statement</h3>
+        <p class="text-gray-600">The national curriculum for South African public schools, covering Grades R-12.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-8 text-center">
+        <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-2xl font-bold text-purple-600">IEB</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Independent Examinations Board</h3>
+        <p class="text-gray-600">Independent assessment body for private schools in South Africa.</p>
+      </div>
+
+      <div class="bg-white rounded-xl p-8 text-center">
+        <div class="w-20 h-20 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="text-xl font-bold text-pink-600">Cambridge</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">Cambridge International</h3>
+        <p class="text-gray-600">Internationally recognized qualifications including IGCSE and A-Levels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-indigo-600 text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-6">Ready to Excel in Your Subjects?</h2>
+    <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+      Book a free assessment to discuss your subject needs and get matched with the perfect tutor.
+    </p>
+    <%= link_to book_assessment_path, class: "inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg" do %>
+      Book Your Free Assessment
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+      </svg>
+    <% end %>
+  </div>
+</section>

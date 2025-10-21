@@ -1,0 +1,22 @@
+/* Card Component Classes */
+/* Compose DaisyUI and Tailwind utilities into semantic card classes */
+
+.card-homework {
+  @apply card bg-base-100 shadow-md;
+}
+
+.card-class {
+  @apply card bg-base-100 shadow-md border border-base-300;
+}
+
+.card-feedback {
+  @apply card bg-base-100 shadow-sm;
+}
+
+.card-student {
+  @apply card bg-base-100 shadow-md hover:shadow-lg transition-shadow;
+}
+
+.card-dashboard {
+  @apply card bg-base-100 shadow-md;
+}

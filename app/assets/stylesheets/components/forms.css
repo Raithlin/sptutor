@@ -1,0 +1,34 @@
+/* Form Component Classes */
+/* Compose DaisyUI and Tailwind utilities into semantic form classes */
+
+.form-standard {
+  @apply space-y-4;
+}
+
+.form-actions {
+  @apply flex gap-2 justify-end mt-6;
+}
+
+.field-group {
+  @apply form-control w-full;
+}
+
+.field-label {
+  @apply label;
+}
+
+.field-input {
+  @apply input input-bordered w-full;
+}
+
+.field-textarea {
+  @apply textarea textarea-bordered w-full;
+}
+
+.field-select {
+  @apply select select-bordered w-full;
+}
+
+.field-error {
+  @apply label-text-alt text-error;
+}

@@ -4,12 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :recoverable, :rememberable, :validatable
 
   # Role enum
-  enum role: {
-    parent: 0,
-    student: 1,
-    tutor: 2,
-    administrator: 3
-  }
+  enum :role, { parent: 0, student: 1, tutor: 2, administrator: 3 }, default: :parent
 
   # Validations
   validates :first_name, presence: true, length: { minimum: 2, maximum: 50 }

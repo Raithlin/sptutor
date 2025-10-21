@@ -1,0 +1,34 @@
+/* Dashboard Component Classes */
+/* Compose DaisyUI and Tailwind utilities into semantic dashboard classes */
+
+.stat-card {
+  @apply stat bg-base-100 shadow-md rounded-lg;
+}
+
+.widget {
+  @apply card bg-base-100 shadow-md;
+}
+
+.widget-header {
+  @apply card-title text-lg font-semibold;
+}
+
+.widget-body {
+  @apply card-body;
+}
+
+.widget-list-item {
+  @apply flex items-center justify-between py-3 border-b border-base-300 last:border-0;
+}
+
+.dashboard-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+.dashboard-section {
+  @apply mb-8;
+}
+
+.dashboard-header {
+  @apply text-2xl font-bold mb-4;
+}

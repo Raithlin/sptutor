@@ -1,0 +1,34 @@
+/* Badge Component Classes */
+/* Compose DaisyUI and Tailwind utilities into semantic badge classes */
+
+.badge-pending {
+  @apply badge badge-warning;
+}
+
+.badge-submitted {
+  @apply badge badge-success;
+}
+
+.badge-overdue {
+  @apply badge badge-error;
+}
+
+.badge-scheduled {
+  @apply badge badge-info;
+}
+
+.badge-completed {
+  @apply badge badge-success;
+}
+
+.badge-cancelled {
+  @apply badge badge-ghost;
+}
+
+.badge-active {
+  @apply badge badge-success;
+}
+
+.badge-inactive {
+  @apply badge badge-ghost;
+}

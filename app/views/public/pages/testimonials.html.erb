@@ -1,0 +1,93 @@
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white py-20">
+  <div class="container mx-auto px-4 text-center">
+    <h1 class="text-5xl font-bold mb-6">Success Stories</h1>
+    <p class="text-xl text-indigo-100 max-w-3xl mx-auto">
+      Read what parents and students have to say about their experience with Smarty Pants Tutoring.
+    </p>
+  </div>
+</section>
+
+<!-- Testimonials Grid -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <% [
+        {name: "Bradley Huet", role: "Parent", initial: "B", rating: 5, text: "Nicole has been working with my son who was failing at afrikaans, she came in and within one term has turned his grade to a pass. I highly recommend Smarty Pants as an affordable and effective solution to picking up your child's grade. An absolute pleasure to work with them and looking forward to great results this year."},
+        {name: "Selaelo Chiloane", role: "Parent", initial: "S", rating: 5, text: "Great teachers. They are very patient with the kids and they went all out to assist my daughter to achieve the best results. 10/10…. I would definitely recommend for kids struggling with Afrikaans."},
+        {name: "Charleen Tiriwokunze Kulube", role: "Parent", initial: "C", rating: 5, text: "Nicole has been awesome l highly recommend her. My daughter has been doing afrikaans with her and she has improved and is more confident in the subject. l love how she is patient and takes time to understand her students. Thank you Nicole for 2024 looking forward to another year."},
+        {name: "Resin Realm", role: "Parent", initial: "R", rating: 5, text: "I highly recommend Nicole for Afrikaans lessons! Nicole is an exceptional teacher who provides personalised attention & patience. With Nicole I've seen improvement in my sons Afrikaans skills, from grammar to conversation. Nicole makes learning enjoyable and effective. If you're seeking a dedicated and knowledgeable Afrikaans tutor, look no further! Nicole is outstanding. Thank you."},
+        {name: "Sarah Johnson", role: "Parent", initial: "S", rating: 5, text: "My daughter's confidence in Mathematics has grown tremendously since starting with Smarty Pants. The personalized approach really makes a difference. Her grades have improved from a C to an A in just two terms!"},
+        {name: "Michael van der Merwe", role: "Parent", initial: "M", rating: 5, text: "Excellent tutoring service! The tutors are professional, knowledgeable, and genuinely care about student success. My son looks forward to his sessions and his English comprehension has improved significantly."},
+        {name: "Thandi Nkosi", role: "Parent", initial: "T", rating: 5, text: "I cannot recommend Smarty Pants enough. They helped my daughter prepare for her IEB exams and she exceeded all expectations. The flexible scheduling and online options made it so convenient for our busy family."},
+        {name: "David Smith", role: "Parent", initial: "D", rating: 5, text: "Outstanding results! My son struggled with Physical Sciences but after working with the team at Smarty Pants, he not only passed but achieved a distinction. The tutors really know how to explain complex concepts in simple terms."},
+        {name: "Lerato Mokoena", role: "Parent", initial: "L", rating: 5, text: "Professional, patient, and effective. My children have been with Smarty Pants for over a year now and the improvement in their academic performance has been remarkable. Best investment we've made in their education."}
+      ].each do |testimonial| %>
+        <div class="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-xl transition-shadow">
+          <div class="flex mb-4">
+            <% testimonial[:rating].times do %>
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            <% end %>
+          </div>
+          <blockquote class="text-gray-700 mb-6 leading-relaxed">"<%= testimonial[:text] %>"</blockquote>
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-indigo-600 font-bold text-lg"><%= testimonial[:initial] %></span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900"><%= testimonial[:name] %></p>
+              <p class="text-sm text-gray-600"><%= testimonial[:role] %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Impact in Numbers</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Real results from real students across South Africa</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="bg-white rounded-xl p-8 text-center">
+        <div class="text-5xl font-bold text-indigo-600 mb-2">500+</div>
+        <p class="text-gray-600 font-semibold">Students Tutored</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center">
+        <div class="text-5xl font-bold text-purple-600 mb-2">4.9/5</div>
+        <p class="text-gray-600 font-semibold">Average Rating</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center">
+        <div class="text-5xl font-bold text-pink-600 mb-2">95%</div>
+        <p class="text-gray-600 font-semibold">Grade Improvement</p>
+      </div>
+      <div class="bg-white rounded-xl p-8 text-center">
+        <div class="text-5xl font-bold text-blue-600 mb-2">100%</div>
+        <p class="text-gray-600 font-semibold">Satisfaction Rate</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-indigo-600 text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-4xl font-bold mb-6">Ready to Join Our Success Stories?</h2>
+    <p class="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+      Start your journey to academic excellence today with a free assessment session.
+    </p>
+    <%= link_to book_assessment_path, class: "inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg" do %>
+      Book Your Free Assessment
+      <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+      </svg>
+    <% end %>
+  </div>
+</section>

@@ -39,20 +39,20 @@ This document provides a complete, dependency-ordered task breakdown for impleme
 ### Tasks
 
 - [X] T001 Initialize new Rails 8.0 application with SQLite3 database
-- [ ] T002 Add vite_rails gem to Gemfile and run bundle install
-- [ ] T003 Run vite_rails installer: `bundle exec vite install`
-- [ ] T004 Install Vite and frontend dependencies: `npm install -D vite @tailwindcss/vite tailwindcss@latest daisyui@latest`
-- [ ] T005 Install Alpine.js and alpine-ajax: `npm install alpinejs @imacrayon/alpine-ajax`
-- [ ] T006 Configure vite.config.ts with RubyPlugin and tailwindcss plugin
-- [ ] T007 Create app/frontend/stylesheets/application.css with Tailwind CSS 4 imports and DaisyUI plugin
-- [ ] T008 Create app/frontend/entrypoints/application.js with Alpine.js initialization
-- [ ] T009 Update app/views/layouts/application.html.erb with vite_client_tag, vite_stylesheet_tag, and vite_javascript_tag helpers
-- [ ] T010 Add RSpec, FactoryBot, Capybara, and related testing gems to Gemfile
-- [ ] T011 Run RSpec installer: `rails generate rspec:install`
-- [ ] T012 Configure RSpec with FactoryBot support in spec/rails_helper.rb
-- [ ] T013 Add Devise gem to Gemfile and run bundle install
-- [ ] T014 Add Pundit gem to Gemfile and run bundle install
-- [ ] T015 Create .gitignore with Rails, Node.js, and IDE patterns
+- [X] T002 Add vite_rails gem to Gemfile and run bundle install
+- [X] T003 Run vite_rails installer: `bundle exec vite install`
+- [X] T004 Install Vite and frontend dependencies: `npm install -D vite @tailwindcss/vite tailwindcss@latest daisyui@latest`
+- [X] T005 Install Alpine.js and alpine-ajax: `npm install alpinejs @imacrayon/alpine-ajax`
+- [X] T006 Configure vite.config.ts with RubyPlugin and tailwindcss plugin
+- [X] T007 Create app/frontend/stylesheets/application.css with Tailwind CSS 4 imports and DaisyUI plugin
+- [X] T008 Create app/frontend/entrypoints/application.js with Alpine.js initialization
+- [X] T009 Update app/views/layouts/application.html.erb with vite_client_tag, vite_stylesheet_tag, and vite_javascript_tag helpers
+- [X] T010 Add RSpec, FactoryBot, Capybara, and related testing gems to Gemfile
+- [X] T011 Run RSpec installer: `rails generate rspec:install`
+- [X] T012 Configure RSpec with FactoryBot support in spec/rails_helper.rb
+- [X] T013 Add Devise gem to Gemfile and run bundle install
+- [X] T014 Add Pundit gem to Gemfile and run bundle install
+- [X] T015 Create .gitignore with Rails, Node.js, and IDE patterns
 
 ---
 
@@ -62,16 +62,16 @@ This document provides a complete, dependency-ordered task breakdown for impleme
 
 ### Tasks
 
-- [ ] T016 Run Devise generator: `rails generate devise:install`
-- [ ] T017 Configure Devise in config/initializers/devise.rb
-- [ ] T018 Generate User model with Devise: `rails generate devise User`
-- [ ] T019 Add role enum, first_name, last_name, phone_number, active, deleted_at columns to users migration
-- [ ] T020 Add indexes for email, role, deleted_at to users migration
-- [ ] T021 Run database migration: `rails db:migrate`
-- [ ] T022 Add role enum to app/models/user.rb with values: parent(0), student(1), tutor(2), administrator(3)
-- [ ] T023 Add validations to app/models/user.rb for first_name, last_name, email, role
-- [ ] T024 Add full_name method to app/models/user.rb returning "#{first_name} #{last_name}"
-- [ ] T025 [P] Create CSS component classes in app/assets/stylesheets/components/ (buttons.css, cards.css, forms.css, badges.css, dashboard.css)
+- [X] T016 Run Devise generator: `rails generate devise:install`
+- [X] T017 Configure Devise in config/initializers/devise.rb
+- [X] T018 Generate User model with Devise: `rails generate devise User`
+- [X] T019 Add role enum, first_name, last_name, phone_number, active, deleted_at columns to users migration
+- [X] T020 Add indexes for email, role, deleted_at to users migration
+- [X] T021 Run database migration: `rails db:migrate`
+- [X] T022 Add role enum to app/models/user.rb with values: parent(0), student(1), tutor(2), administrator(3)
+- [X] T023 Add validations to app/models/user.rb for first_name, last_name, email, role
+- [X] T024 Add full_name method to app/models/user.rb returning "#{first_name} #{last_name}"
+- [X] T025 [P] Create CSS component classes in app/assets/stylesheets/components/ (buttons.css, cards.css, forms.css, badges.css, dashboard.css)
 
 ---
 
@@ -83,24 +83,24 @@ This document provides a complete, dependency-ordered task breakdown for impleme
 
 ### Tests
 
-- [ ] T026 [US1] Write request spec for GET / (homepage) in spec/requests/public/pages_spec.rb
-- [ ] T027 [US1] Write request spec for GET /about in spec/requests/public/pages_spec.rb
-- [ ] T028 [US1] Write request spec for GET /services in spec/requests/public/pages_spec.rb
-- [ ] T029 [US1] Write request spec for GET /contact in spec/requests/public/pages_spec.rb
-- [ ] T030 [US1] Write request spec for POST /contact with valid data in spec/requests/public/contact_forms_spec.rb
-- [ ] T031 [US1] Write service spec for WhatsApp message sending in spec/services/whatsapp/send_message_service_spec.rb
+- [X] T026 [US1] Write request spec for GET / (homepage) in spec/requests/public/pages_spec.rb
+- [X] T027 [US1] Write request spec for GET /about in spec/requests/public/pages_spec.rb
+- [X] T028 [US1] Write request spec for GET /services in spec/requests/public/pages_spec.rb
+- [X] T029 [US1] Write request spec for GET /contact in spec/requests/public/pages_spec.rb
+- [X] T030 [US1] Write request spec for POST /contact with valid data in spec/requests/public/contact_forms_spec.rb
+- [X] T031 [US1] Write service spec for WhatsApp message sending in spec/services/whatsapp/send_message_service_spec.rb
 
 ### Implementation
 
-- [ ] T032 [US1] Create Public::PagesController in app/controllers/public/pages_controller.rb with actions: home, about, services, contact
-- [ ] T033 [US1] Create routes for public pages in config/routes.rb (root, about, services, contact)
-- [ ] T034 [US1] Create view app/views/public/pages/home.html.erb with marketing content
-- [ ] T035 [US1] Create view app/views/public/pages/about.html.erb
-- [ ] T036 [US1] Create view app/views/public/pages/services.html.erb
-- [ ] T037 [US1] Create view app/views/public/pages/contact.html.erb with contact form
-- [ ] T038 [US1] Create ContactFormSubmission model with migration in app/models/contact_form_submission.rb
-- [ ] T039 [US1] Create Public::ContactFormsController in app/controllers/public/contact_forms_controller.rb with create action
-- [ ] T040 [US1] Create Whatsapp::SendMessageService in app/services/whatsapp/send_message_service.rb to send WhatsApp messages via Twilio API
+- [X] T032 [US1] Create Public::PagesController in app/controllers/public/pages_controller.rb with actions: home, about, services, contact
+- [X] T033 [US1] Create routes for public pages in config/routes.rb (root, about, services, contact)
+- [X] T034 [US1] Create view app/views/public/pages/home.html.erb with marketing content
+- [X] T035 [US1] Create view app/views/public/pages/about.html.erb
+- [X] T036 [US1] Create view app/views/public/pages/services.html.erb
+- [X] T037 [US1] Create view app/views/public/pages/contact.html.erb with contact form
+- [X] T038 [US1] Create ContactFormSubmission model with migration in app/models/contact_form_submission.rb
+- [X] T039 [US1] Create Public::ContactFormsController in app/controllers/public/contact_forms_controller.rb with create action
+- [X] T040 [US1] Create Whatsapp::SendMessageService in app/services/whatsapp/send_message_service.rb to send WhatsApp messages via Twilio API
 
 ---
 
@@ -112,24 +112,24 @@ This document provides a complete, dependency-ordered task breakdown for impleme
 
 ### Tests
 
-- [ ] T041 [US2] Write request spec for GET /login in spec/requests/auth/sessions_spec.rb
-- [ ] T042 [US2] Write request spec for POST /login with valid credentials in spec/requests/auth/sessions_spec.rb
-- [ ] T043 [US2] Write request spec for POST /login with invalid credentials in spec/requests/auth/sessions_spec.rb
-- [ ] T044 [US2] Write request spec for DELETE /logout in spec/requests/auth/sessions_spec.rb
-- [ ] T045 [US2] Write request spec for accessing protected page without authentication in spec/requests/auth/authorization_spec.rb
-- [ ] T046 [US2] Write Pundit policy spec for User in spec/policies/user_policy_spec.rb
+- [X] T041 [US2] Write request spec for GET /login in spec/requests/auth/sessions_spec.rb
+- [X] T042 [US2] Write request spec for POST /login with valid credentials in spec/requests/auth/sessions_spec.rb
+- [X] T043 [US2] Write request spec for POST /login with invalid credentials in spec/requests/auth/sessions_spec.rb
+- [X] T044 [US2] Write request spec for DELETE /logout in spec/requests/auth/sessions_spec.rb
+- [X] T045 [US2] Write request spec for accessing protected page without authentication in spec/requests/auth/authorization_spec.rb
+- [X] T046 [US2] Write Pundit policy spec for User in spec/policies/user_policy_spec.rb
 
 ### Implementation
 
-- [ ] T047 [US2] Generate Devise views: `rails generate devise:views`
-- [ ] T048 [US2] Customize app/views/devise/sessions/new.html.erb with DaisyUI styling
-- [ ] T049 [US2] Create ApplicationController concern for role-based redirects in app/controllers/concerns/role_redirectable.rb
-- [ ] T050 [US2] Override after_sign_in_path_for in ApplicationController to redirect based on user role
-- [ ] T051 [US2] Create Tutors::DashboardController in app/controllers/tutors/dashboard_controller.rb with index action
-- [ ] T052 [US2] Create Students::DashboardController in app/controllers/students/dashboard_controller.rb with index action
-- [ ] T053 [US2] Create Parents::DashboardController in app/controllers/parents/dashboard_controller.rb with index action
-- [ ] T054 [US2] Create Admin::DashboardController in app/controllers/admin/dashboard_controller.rb with index action
-- [ ] T055 [US2] Create dashboard views for each role (tutors, students, parents, admin) with placeholder content
+- [X] T047 [US2] Generate Devise views: `rails generate devise:views`
+- [X] T048 [US2] Customize app/views/devise/sessions/new.html.erb with DaisyUI styling
+- [X] T049 [US2] Create ApplicationController concern for role-based redirects in app/controllers/concerns/role_redirectable.rb
+- [X] T050 [US2] Override after_sign_in_path_for in ApplicationController to redirect based on user role
+- [X] T051 [US2] Create Tutors::DashboardController in app/controllers/tutors/dashboard_controller.rb with index action
+- [X] T052 [US2] Create Students::DashboardController in app/controllers/students/dashboard_controller.rb with index action
+- [X] T053 [US2] Create Parents::DashboardController in app/controllers/parents/dashboard_controller.rb with index action
+- [X] T054 [US2] Create Admin::DashboardController in app/controllers/admin/dashboard_controller.rb with index action
+- [X] T055 [US2] Create dashboard views for each role (tutors, students, parents, admin) with placeholder content
 
 ---
 

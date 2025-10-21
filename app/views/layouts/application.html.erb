@@ -18,7 +18,25 @@
     <%= vite_javascript_tag 'application' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="flex flex-col min-h-screen">
+    <%= render 'shared/navigation' %>
+    
+    <main class="flex-grow">
+      <% if notice %>
+        <div class="bg-green-50 border-l-4 border-green-400 p-4 mb-4">
+          <p class="text-green-700"><%= notice %></p>
+        </div>
+      <% end %>
+      
+      <% if alert %>
+        <div class="bg-red-50 border-l-4 border-red-400 p-4 mb-4">
+          <p class="text-red-700"><%= alert %></p>
+        </div>
+      <% end %>
+      
+      <%= yield %>
+    </main>
+    
+    <%= render 'shared/footer' %>
   </body>
 </html>
